@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220419213501">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220621221527">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,6 @@
 			</div>
 		</header>
 		<main class="page">
-
 			<section data-watch="navigator" id="time" class="time">
 				<div class="time__container">
 					<div class="time__slider">
@@ -134,7 +133,7 @@
 			</section>
 
 			<section data-watch="navigator" id="about-us" class="about-us">
-				<div class="about-us__top top-about-us">
+				<div data-watch-threshold="0.25" data-watch-once data-watch class="about-us__top top-about-us animation">
 					<div class="top-about-us__container">
 						<div class="top-about-us__item">
 							<div class="top-about-us__box">
@@ -204,7 +203,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="about-us__body body-about-us">
+				<div data-watch-threshold="0.25"" data-watch-once data-watch class=" about-us__body body-about-us animation">
 					<div class="body-about-us__inner">
 						<label class="body-about-us__label label _icon-coffee">about us</label>
 						<div class="body-about-us__items">
@@ -260,7 +259,7 @@
 
 			<div data-watch="navigator" id="products" class="wrapper-products">
 
-				<section class="coffee-house">
+				<section data-watch-threshold="0.25" data-watch-once data-watch class="coffee-house animation">
 					<div class="coffee-house__image-ibg">
 						<picture><source srcset="img/coffee-house/01.webp" type="image/webp"><img src="img/coffee-house/01.jpg" alt="image"></picture>
 					</div>
@@ -342,7 +341,7 @@
 					</div>
 				</section>
 
-				<section class="products">
+				<section data-watch-threshold="0.25" data-watch-once data-watch class="products animation">
 					<div class="products__inner">
 						<div class="products__top top-products">
 							<div class="top-products__conetnt">
@@ -443,7 +442,7 @@
 			</div>
 
 			<section data-watch="navigator" id="offer" class="offer">
-				<div class="offer__wrapper">
+				<div data-watch-threshold="0.25"" data-watch-once data-watch class=" offer__wrapper animation">
 					<div data-popup="#popup" class="offer__image image-offer">
 						<div class="image-offer__image-ibg">
 							<picture><source srcset="img/offer/01.webp" type="image/webp"><img src="img/offer/01.png" alt="image"></picture>
@@ -547,51 +546,175 @@
 				</div>
 			</section>
 
-			<section data-watch="navigator" id="review" class="our-client">
-				<div class="our-client__container">
-					<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_first">
-						<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
-					</div>
-					<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_second">
-						<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
-					</div>
-					<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_third">
-						<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
-					</div>
-					<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_fourth">
-						<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
-					</div>
-					<div class="our-client__inner">
-						<div class="our-client__image-ibg">
-							<picture><source srcset="img/our-client/01.webp" type="image/webp"><img src="img/our-client/01.png" alt="image"></picture>
-							<div class="our-client__bubble"></div>
-						</div>
-						<div class="our-client__content">
-							<div class="our-client__top">
-								<label class="our-client__label label _icon-coffee">client testimonial</label>
-								<h2 class="our-client__title title">Our client say something about cafenod</h2>
-								<div class="our-client__text">Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuey.</div>
+			<div data-watch="navigator" id="review">
+
+				<section data-watch-threshold="0.25" data-watch-once data-watch class="our-client animation">
+					<div data-tabs data-tabs-animate class="our-client__container">
+						<div data-tabs-titles class="our-client__navigation">
+							<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_first _tab-active">
+								<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
 							</div>
-							<div class="our-client__review">
-								<div class="our-client__line">
-									<div class="our-client__name">rasalina De Willamson</div>
-									<div class="our-client__stars">
-										<div class="our-client__star _icon-star_checked"></div>
-										<div class="our-client__star _icon-star_checked"></div>
-										<div class="our-client__star _icon-star_checked"></div>
-										<div class="our-client__star _icon-star"></div>
-										<div class="our-client__star _icon-star"></div>
+							<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_second">
+								<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
+							</div>
+							<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_third">
+								<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
+							</div>
+							<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_fourth">
+								<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
+							</div>
+							<div class="our-client__icon-ibg our-client__icon-ibg_contain our-client__icon-ibg_fifth">
+								<picture><source srcset="img/about-us/08.webp" type="image/webp"><img src="img/about-us/08.png" alt="image"></picture>
+							</div>
+						</div>
+						<div data-tabs-body class="our-client__body">
+							<div class="our-client__item">
+								<div class="our-client__inner">
+									<div class="our-client__image-ibg">
+										<picture><source srcset="img/our-client/01.webp" type="image/webp"><img src="img/our-client/01.png" alt="image"></picture>
+										<div class="our-client__bubble"></div>
+									</div>
+									<div class="our-client__content">
+										<div class="our-client__top">
+											<label class="our-client__label label _icon-coffee">1 client testimonial</label>
+											<h2 class="our-client__title title">1 Our client say something about cafenod</h2>
+											<div class="our-client__text">Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuey.</div>
+										</div>
+										<div class="our-client__review">
+											<div class="our-client__line">
+												<a href="#" class="our-client__name">rasalina De Willamson</a>
+												<div class="our-client__stars">
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star"></div>
+													<div class="our-client__star _icon-star"></div>
+													<div class="our-client__star _icon-star"></div>
+													<div class="our-client__star _icon-star"></div>
+												</div>
+											</div>
+											<div class="our-client__position">Founder & CO</div>
+										</div>
 									</div>
 								</div>
-								<div class="our-client__position">Founder & CO</div>
+							</div>
+							<div class="our-client__item">
+								<div class="our-client__inner">
+									<div class="our-client__image-ibg">
+										<picture><source srcset="img/our-client/01.webp" type="image/webp"><img src="img/our-client/01.png" alt="image"></picture>
+										<div class="our-client__bubble"></div>
+									</div>
+									<div class="our-client__content">
+										<div class="our-client__top">
+											<label class="our-client__label label _icon-coffee">2 client testimonial</label>
+											<h2 class="our-client__title title">2 Our client say something about cafenod</h2>
+											<div class="our-client__text">Rorem ipsum dolor sit amet</div>
+										</div>
+										<div class="our-client__review">
+											<div class="our-client__line">
+												<a href="#" class="our-client__name">rasalina De Willamson</a>
+												<div class="our-client__stars">
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star"></div>
+													<div class="our-client__star _icon-star"></div>
+													<div class="our-client__star _icon-star"></div>
+												</div>
+											</div>
+											<div class="our-client__position">Founder & CO</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="our-client__item">
+								<div class="our-client__inner">
+									<div class="our-client__image-ibg">
+										<picture><source srcset="img/our-client/01.webp" type="image/webp"><img src="img/our-client/01.png" alt="image"></picture>
+										<div class="our-client__bubble"></div>
+									</div>
+									<div class="our-client__content">
+										<div class="our-client__top">
+											<label class="our-client__label label _icon-coffee">3 client testimonial</label>
+											<h2 class="our-client__title title">3 Our client say something about cafenod</h2>
+											<div class="our-client__text">Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+										</div>
+										<div class="our-client__review">
+											<div class="our-client__line">
+												<a href="#" class="our-client__name">rasalina De Willamson</a>
+												<div class="our-client__stars">
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star"></div>
+													<div class="our-client__star _icon-star"></div>
+												</div>
+											</div>
+											<div class="our-client__position">Founder & CO</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="our-client__item">
+								<div class="our-client__inner">
+									<div class="our-client__image-ibg">
+										<picture><source srcset="img/our-client/01.webp" type="image/webp"><img src="img/our-client/01.png" alt="image"></picture>
+										<div class="our-client__bubble"></div>
+									</div>
+									<div class="our-client__content">
+										<div class="our-client__top">
+											<label class="our-client__label label _icon-coffee">4 client testimonial</label>
+											<h2 class="our-client__title title">4 Our client say something about cafenod</h2>
+										</div>
+										<div class="our-client__review">
+											<div class="our-client__line">
+												<a href="#" class="our-client__name">rasalina De Willamson</a>
+												<div class="our-client__stars">
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star"></div>
+												</div>
+											</div>
+											<div class="our-client__position">Founder & CO</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="our-client__item">
+								<div class="our-client__inner">
+									<div class="our-client__image-ibg">
+										<picture><source srcset="img/our-client/01.webp" type="image/webp"><img src="img/our-client/01.png" alt="image"></picture>
+										<div class="our-client__bubble"></div>
+									</div>
+									<div class="our-client__content">
+										<div class="our-client__top">
+											<label class="our-client__label label _icon-coffee">5 client testimonial</label>
+											<h2 class="our-client__title title">5 Our client say something about cafenod</h2>
+											<div class="our-client__text">Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuey. Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuey.</div>
+										</div>
+										<div class="our-client__review">
+											<div class="our-client__line">
+												<a href="#" class="our-client__name">rasalina De Willamson</a>
+												<div class="our-client__stars">
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+													<div class="our-client__star _icon-star_checked"></div>
+												</div>
+											</div>
+											<div class="our-client__position">Founder & CO</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+
+			</div>
 
 			<section data-watch="navigator" id="blog" class="news">
-				<div class="news__inner">
+				<div data-watch-threshold="0.25" data-watch-once data-watch class="news__inner animation">
 					<div class="news__top top-news">
 						<label class="top-news__label label _icon-coffee">News & Blog</label>
 						<h2 class="top-news__title title">Latest news & Blog</h2>
@@ -669,112 +792,113 @@
 					<a href="#" class="news__button button button_white button_transparant">See all Blog</a>
 				</div>
 			</section>
-
 		</main>
 		<footer data-watch="navigator" id="contact-us" class="footer">
 			<div class="footer__background">
 				<div class="footer__image-ibg">
 					<picture><source srcset="img/footer/01.webp" type="image/webp"><img src="img/footer/01.png" alt="image"></picture>
 				</div>
-				<div class="footer__top top-footer">
-					<div class="top-footer__inner">
-						<h2 class="top-footer__title title">Coffee Build your <br> Fresh mind</h2>
-						<form action="#" class="top-footer__body">
-							<div class="top-footer__line">
-								<input autocomplete="off" type="text" data-required="email" placeholder="Enter your email" class="input">
-								<button type="submit" class="top-footer__button button">subscribe now</button>
-							</div>
-						</form>
+				<div data-watch-threshold="0.25" data-watch-once data-watch class="footer__box animation">
+					<div class="footer__top top-footer">
+						<div class="top-footer__inner">
+							<h2 class="top-footer__title title">Coffee Build your <br> Fresh mind</h2>
+							<form action="#" class="top-footer__body">
+								<div class="top-footer__line">
+									<input autocomplete="off" type="text" data-required="email" placeholder="Enter your email" class="input">
+									<button type="submit" class="top-footer__button button">subscribe now</button>
+								</div>
+							</form>
+						</div>
 					</div>
-				</div>
-				<div class="footer__body body-footer">
-					<div class="body-footer__inner">
-						<div class="body-footer__content content-body-footer">
-							<a href="#" class="content-body-footer__logo-ibg content-body-footer__logo-ibg_contain">
-								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="image"></picture>
-							</a>
-							<div class="content-body-footer__text">Rorem ipsum dolorconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniaminventore veritatis et.orem ipsum dolorconsectetur adipisicing elit, sed do eiusmod tempor incididunt aneye.</div>
-							<div class="content-body-footer__social">
-								<a href="#" class="content-body-footer__icon icon _icon-twitter"></a>
-								<a href="#" class="content-body-footer__icon icon _icon-facebook"></a>
-								<a href="#" class="content-body-footer__icon icon _icon-instagram"></a>
-								<a href="#" class="content-body-footer__icon icon _icon-youtube"></a>
-								<a href="#" class="content-body-footer__icon icon _icon-behance"></a>
-							</div>
-						</div>
-						<div class="body-footer__column body-footer__column_first column-body-footer">
-							<div class="column-body-footer__label label-footer">Contact us</div>
-							<ul class="column-body-footer__list">
-								<li class="column-body-footer__item">
-									<div class="column-body-footer__text">Adress :</div>
-									<a href="#" class="column-body-footer__link">8638 Amarica Stranfod</a>
-								</li>
-								<li class="column-body-footer__item">
-									<div class="column-body-footer__text">Mail :</div>
-									<a href="mailto:Israfilsupol836@gmail.com" class="column-body-footer__link">Israfilsupol836@gmail.com</a>
-								</li>
-								<li class="column-body-footer__item">
-									<div class="column-body-footer__text">Phone :</div>
-									<a href="tel:+746401873535645" class="column-body-footer__link">+7464 0187 3535 645</a>
-								</li>
-								<li class="column-body-footer__item">
-									<div class="column-body-footer__text">Fax id :</div>
-									<a href="#" class="column-body-footer__link">+9 659459 49594</a>
-								</li>
-							</ul>
-						</div>
-						<div data-spollers="600,max" class="body-footer__column body-footer__column_second column-body-footer">
-							<div data-spoller class="column-body-footer__label label-footer label-footer-spoller">opening hours</div>
-							<div class="column-body-footer__lines">
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Saterday</div>
-									<div class="column-body-footer__time">9:00 - 18:00</div>
-								</div>
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Sunday</div>
-									<div class="column-body-footer__time">10:00 - 18:00</div>
-								</div>
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Monday</div>
-									<div class="column-body-footer__time">11:00 - 19:00</div>
-								</div>
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Tuesday</div>
-									<div class="column-body-footer__time">12:00 - 19:00</div>
-								</div>
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Webnestday</div>
-									<div class="column-body-footer__time">12:00 - 20;00</div>
-								</div>
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Thusday</div>
-									<div class="column-body-footer__time">13:00 - 18:00</div>
-								</div>
-								<div class="column-body-footer__line">
-									<div class="column-body-footer__day">Friday</div>
-									<div class="column-body-footer__time">Closed</div>
+					<div class="footer__body body-footer">
+						<div class="body-footer__inner">
+							<div class="body-footer__content content-body-footer">
+								<a href="#" class="content-body-footer__logo-ibg content-body-footer__logo-ibg_contain">
+									<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="image"></picture>
+								</a>
+								<div class="content-body-footer__text">Rorem ipsum dolorconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniaminventore veritatis et.orem ipsum dolorconsectetur adipisicing elit, sed do eiusmod tempor incididunt aneye.</div>
+								<div class="content-body-footer__social">
+									<a href="#" class="content-body-footer__icon icon _icon-twitter"></a>
+									<a href="#" class="content-body-footer__icon icon _icon-facebook"></a>
+									<a href="#" class="content-body-footer__icon icon _icon-instagram"></a>
+									<a href="#" class="content-body-footer__icon icon _icon-youtube"></a>
+									<a href="#" class="content-body-footer__icon icon _icon-behance"></a>
 								</div>
 							</div>
-						</div>
-						<div data-spollers="600,max" class="body-footer__news news-body-footer">
-							<div data-spoller class="news-body-footer__label label-footer label-footer-spoller">Recent News</div>
-							<div class="news-body-footer__items">
-								<div class="news-body-footer__item">
-									<a href="#" class="news-body-footer__image-ibg">
-										<picture><source srcset="img/footer/02.webp" type="image/webp"><img src="img/footer/02.jpg" alt="image"></picture>
-									</a>
-									<div class="news-body-footer__contenct">
-										<a href="#" class="news-body-footer__text">Best Smell of Americano Coffee Trins</a>
-										<div class="news-body-footer__date">December 30 - 2021</div>
+							<div class="body-footer__column body-footer__column_first column-body-footer">
+								<div class="column-body-footer__label label-footer">Contact us</div>
+								<ul class="column-body-footer__list">
+									<li class="column-body-footer__item">
+										<div class="column-body-footer__text">Adress :</div>
+										<a href="#" class="column-body-footer__link">8638 Amarica Stranfod</a>
+									</li>
+									<li class="column-body-footer__item">
+										<div class="column-body-footer__text">Mail :</div>
+										<a href="mailto:Israfilsupol836@gmail.com" class="column-body-footer__link">Israfilsupol836@gmail.com</a>
+									</li>
+									<li class="column-body-footer__item">
+										<div class="column-body-footer__text">Phone :</div>
+										<a href="tel:+746401873535645" class="column-body-footer__link">+7464 0187 3535 645</a>
+									</li>
+									<li class="column-body-footer__item">
+										<div class="column-body-footer__text">Fax id :</div>
+										<a href="#" class="column-body-footer__link">+9 659459 49594</a>
+									</li>
+								</ul>
+							</div>
+							<div data-spollers="600,max" class="body-footer__column body-footer__column_second column-body-footer">
+								<div data-spoller class="column-body-footer__label label-footer label-footer-spoller">opening hours</div>
+								<div class="column-body-footer__lines">
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Saterday</div>
+										<div class="column-body-footer__time">9:00 - 18:00</div>
+									</div>
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Sunday</div>
+										<div class="column-body-footer__time">10:00 - 18:00</div>
+									</div>
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Monday</div>
+										<div class="column-body-footer__time">11:00 - 19:00</div>
+									</div>
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Tuesday</div>
+										<div class="column-body-footer__time">12:00 - 19:00</div>
+									</div>
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Webnestday</div>
+										<div class="column-body-footer__time">12:00 - 20;00</div>
+									</div>
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Thusday</div>
+										<div class="column-body-footer__time">13:00 - 18:00</div>
+									</div>
+									<div class="column-body-footer__line">
+										<div class="column-body-footer__day">Friday</div>
+										<div class="column-body-footer__time">Closed</div>
 									</div>
 								</div>
-								<div class="news-body-footer__item">
-									<a href="#" class="news-body-footer__image-ibg">
-										<picture><source srcset="img/footer/03.webp" type="image/webp"><img src="img/footer/03.jpg" alt="image"></picture>
-									</a>
-									<div class="news-body-footer__contenct">
-										<a href="#" class="news-body-footer__text">Best Smell of Americano Coffee Trins</a>
-										<div class="news-body-footer__date">December 30 - 2022</div>
+							</div>
+							<div data-spollers="600,max" class="body-footer__news news-body-footer">
+								<div data-spoller class="news-body-footer__label label-footer label-footer-spoller">Recent News</div>
+								<div class="news-body-footer__items">
+									<div class="news-body-footer__item">
+										<a href="#" class="news-body-footer__image-ibg">
+											<picture><source srcset="img/footer/02.webp" type="image/webp"><img src="img/footer/02.jpg" alt="image"></picture>
+										</a>
+										<div class="news-body-footer__contenct">
+											<a href="#" class="news-body-footer__text">Best Smell of Americano Coffee Trins</a>
+											<div class="news-body-footer__date">December 30 - 2021</div>
+										</div>
+									</div>
+									<div class="news-body-footer__item">
+										<a href="#" class="news-body-footer__image-ibg">
+											<picture><source srcset="img/footer/03.webp" type="image/webp"><img src="img/footer/03.jpg" alt="image"></picture>
+										</a>
+										<div class="news-body-footer__contenct">
+											<a href="#" class="news-body-footer__text">Best Smell of Americano Coffee Trins</a>
+											<div class="news-body-footer__date">December 30 - 2022</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -798,7 +922,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220419213501"></script>
+	<script src="js/app.min.js?_v=20220621221527"></script>
 </body>
 
 </html>
