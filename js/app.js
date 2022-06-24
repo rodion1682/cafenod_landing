@@ -4143,7 +4143,8 @@
     }));
     const scrollUp = document.querySelector(".scroll-up");
     if (scrollUp) {
-        const offset = 100;
+        const offset = 150;
+        scrollUp.classList.remove("scroll-up_active");
         const scrollUpSvgPath = document.querySelector(".scroll-up__svg-path");
         const pathLenght = scrollUpSvgPath.getTotalLength();
         scrollUpSvgPath.style.strokeDasharray = `${pathLenght} ${pathLenght}`;
