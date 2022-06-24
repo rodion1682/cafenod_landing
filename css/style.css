@@ -8,7 +8,7 @@
   font-weight: 400;
   font-style: normal;
 }
-[class*=_icon-]:before {
+.scroll-up::before, [class*=_icon-]:before {
   font-family: "icons";
   font-style: normal;
   font-weight: normal;
@@ -708,6 +708,141 @@ body::after {
     transform: translate(0px, 0rem);
   }
 }
+.scroll-up {
+  position: fixed;
+  z-index: 10;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.25rem #fff;
+  border: 0.0625rem solid #c7a17a;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  transform: translate(0px, 1.5625rem);
+  background-color: #c7a17a;
+}
+@media (min-width: 120em) {
+  .scroll-up {
+    right: 3.125rem;
+  }
+}
+@media (min-width: 87.5em) and (max-width: 120em) {
+  @supports (right: clamp( 0.9375rem , -4.9519230769rem  +  6.7307692308vw , 3.125rem )) {
+    .scroll-up {
+      right: clamp( 0.9375rem , -4.9519230769rem  +  6.7307692308vw , 3.125rem );
+    }
+  }
+  @supports not (right: clamp( 0.9375rem , -4.9519230769rem  +  6.7307692308vw , 3.125rem )) {
+    .scroll-up {
+      right: calc(0.9375rem + 2.1875 * (100vw - 87.5rem) / 32.5);
+    }
+  }
+}
+@media (max-width: 87.5em) {
+  .scroll-up {
+    right: 0.9375rem;
+  }
+}
+@media (min-width: 120em) {
+  .scroll-up {
+    bottom: 3.125rem;
+  }
+}
+@media (min-width: 87.5em) and (max-width: 120em) {
+  @supports (bottom: clamp( 0.9375rem , -4.9519230769rem  +  6.7307692308vw , 3.125rem )) {
+    .scroll-up {
+      bottom: clamp( 0.9375rem , -4.9519230769rem  +  6.7307692308vw , 3.125rem );
+    }
+  }
+  @supports not (bottom: clamp( 0.9375rem , -4.9519230769rem  +  6.7307692308vw , 3.125rem )) {
+    .scroll-up {
+      bottom: calc(0.9375rem + 2.1875 * (100vw - 87.5rem) / 32.5);
+    }
+  }
+}
+@media (max-width: 87.5em) {
+  .scroll-up {
+    bottom: 0.9375rem;
+  }
+}
+@media (min-width: 120em) {
+  .scroll-up {
+    width: 3.125rem;
+  }
+}
+@media (min-width: 62em) and (max-width: 120em) {
+  @supports (width: clamp( 2.5rem , 1.8318965517rem  +  1.0775862069vw , 3.125rem )) {
+    .scroll-up {
+      width: clamp( 2.5rem , 1.8318965517rem  +  1.0775862069vw , 3.125rem );
+    }
+  }
+  @supports not (width: clamp( 2.5rem , 1.8318965517rem  +  1.0775862069vw , 3.125rem )) {
+    .scroll-up {
+      width: calc(2.5rem + 0.625 * (100vw - 62rem) / 58);
+    }
+  }
+}
+@media (max-width: 62em) {
+  .scroll-up {
+    width: 2.5rem;
+  }
+}
+@media (min-width: 120em) {
+  .scroll-up {
+    height: 3.125rem;
+  }
+}
+@media (min-width: 62em) and (max-width: 120em) {
+  @supports (height: clamp( 2.5rem , 1.8318965517rem  +  1.0775862069vw , 3.125rem )) {
+    .scroll-up {
+      height: clamp( 2.5rem , 1.8318965517rem  +  1.0775862069vw , 3.125rem );
+    }
+  }
+  @supports not (height: clamp( 2.5rem , 1.8318965517rem  +  1.0775862069vw , 3.125rem )) {
+    .scroll-up {
+      height: calc(2.5rem + 0.625 * (100vw - 62rem) / 58);
+    }
+  }
+}
+@media (max-width: 62em) {
+  .scroll-up {
+    height: 2.5rem;
+  }
+}
+@media (any-hover: hover) {
+  .scroll-up:hover {
+    background-color: #d47e28;
+  }
+}
+.scroll-up::before {
+  content: "\e902";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  font-size: 1.25rem;
+  font-weight: 900;
+  transition: color 0.3s ease 0s;
+}
+@media (max-width: 47.99875em) {
+  .scroll-up::before {
+    font-size: 0.9375rem;
+  }
+}
+.scroll-up_active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.scroll-up__svg-path {
+  box-sizing: border-box;
+  fill: none;
+  stroke: #c7a17a;
+  stroke-width: 0.25rem;
+  transition: all 0.3s ease 0s;
+}
+
 .header {
   position: fixed;
   top: 0;

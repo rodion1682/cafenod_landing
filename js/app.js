@@ -4141,6 +4141,31 @@
             }));
         }
     }));
+    const scrollUp = document.querySelector(".scroll-up");
+    if (scrollUp) {
+        const offset = 100;
+        const scrollUpSvgPath = document.querySelector(".scroll-up__svg-path");
+        const pathLenght = scrollUpSvgPath.getTotalLength();
+        scrollUpSvgPath.style.strokeDasharray = `${pathLenght} ${pathLenght}`;
+        scrollUpSvgPath.style.transition = "stroke-dashoffset 30ms";
+        const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
+        const updateDashoffset = () => {
+            const height = document.documentElement.scrollHeight - window.innerHeight;
+            const dashoffset = pathLenght - getTop() * pathLenght / height;
+            scrollUpSvgPath.style.strokeDashoffset = dashoffset;
+        };
+        window.addEventListener("scroll", (() => {
+            updateDashoffset();
+            if (getTop() > offset) scrollUp.classList.add("scroll-up_active"); else scrollUp.classList.remove("scroll-up_active");
+        }));
+        scrollUp.addEventListener("click", (() => {
+            scrollUp.classList.add("yes");
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }));
+    }
     window["FLS"] = false;
     isWebp();
     menuInit();
